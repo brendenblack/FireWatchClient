@@ -1,0 +1,84 @@
+<nav class="d-none d-sm-block text-light bg-dark sidebar">
+    <div class="container">    
+    <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+                <span class='fa fa-bank'></span> Accounts
+                
+                <ul class='list-unstyled'>
+                    <li class="nav-item">
+                        <a class="nav-link text-light bg-dark" routerLink="/accounts" routerLinkActive="link-active">Overview</a>
+                    </li>
+                        
+                    <li *ngFor="let account of currentUser.accounts" class='nav-item'>
+                        <a class="nav-link text-light bg-dark" routerLink="/accounts/{{account.id}}" routerLinkActive="link-active">
+                            {{account.name}}
+                        </a>
+                    </li>
+                </ul>
+            </li> 
+        </ul>
+        </div>
+      </nav>
+
+<!-- <div class='main-nav'>
+        <div class='text-light bg-dark'>
+            <a class='navbar-brand' routerLink='/'>Fire Watch</a>
+
+                <button type='button' class="navbar-toggler" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="sidebar-nav-content">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            <div id="sidebar-nav-content" [ngbCollapse]="isCollapsed">
+                <ul class="nav flex-column">
+                    <li class="nav-item"  >
+                        <a routerLink="/accounts" routerLinkActive="link-active">
+                            <span class='fa fa-bank'></span> Accounts
+                        </a>
+                        <ul class='list-unstyled'>
+                            <li *ngFor="let account of currentUser.accounts" class='nav-item'>
+                                    <a routerLink="/accounts/{{account.id}}" routerLinkActive="link-active">
+                                        {{account.name}}
+                                    </a>
+                            </li>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+
+            -->
+            
+<!-- 
+            <li ngbDropdown class="nav-item">
+                    <a class="nav-link" id="nav-user-dropdown" ngbDropdownToggle>
+                        {{ currentUser.email }}
+                    </a>
+                    <div ngbDropdownMenu aria-labelledby="nav-user-dropdown">
+                      <a class="dropdown-item" routerLink="/accounts" routerLinkActive="active">Accounts</a>
+                      <a class="dropdown-item disabled" routerLink="/profile" routerLinkActive="active">Profile</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" routerLink="/settings" routerLinkActive="active">sign out&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            
+                    </div>
+                  </li> 
+        </div>
+    </div>
+    
+-->
+
+<!-- <div class="main-nav">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/accounts" routerLinkActive="active"><i class="fa fa-university" aria-hidden="true"></i>Accounts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> -->
