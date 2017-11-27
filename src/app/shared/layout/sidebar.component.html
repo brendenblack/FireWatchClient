@@ -10,7 +10,7 @@
                     </li>
                         
                     <li *ngFor="let account of currentUser.accounts" class='nav-item'>
-                        <a class="nav-link text-light bg-dark" routerLink="/accounts/{{account.id}}" routerLinkActive="link-active">
+                        <a class="nav-link text-light bg-dark" [routerLink]="['/accounts', account.slug]" routerLinkActive="link-active">
                             {{account.name}}
                         </a>
                     </li>

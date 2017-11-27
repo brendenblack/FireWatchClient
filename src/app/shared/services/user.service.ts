@@ -41,7 +41,7 @@ export class UserService {
           let accounts:Account[] = []
           data.accounts.forEach(element => {
             let account = new Account();
-            account.id = element.id;
+            account.slug = element.slug;
             account.name = element.name;
             accounts.push(account);            
           });
